@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Trilha Musical do Programador</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@1.4.2/src/css/icons.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/button.css" />
+  </head>
+  <body>
+    <!-- Vídeo de Background -->
+    <video id="background-video" autoplay muted loop>
+      <source src="assets/background.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+
+    <!-- Container Principal -->
+    <div class="main-container">
+      <header class="header">
+        <h1>🎵 A Trilha Musical do Programador 👨‍💻</h1>
+        <p>Encontre a combinação perfeita de duas músicas que somem exatamente 60 minutos!</p>
+      </header>
+
+      <!-- Input para entrada -->
+      <div class="input-section">
+        <label for="music-input">Digite as durações das músicas (separadas por vírgula):</label>
+        <input
+          type="text"
+          id="music-input"
+          placeholder="Ex: 15, 30, 45, 20, 35, 5, 25, 10"
+          aria-label="Campo para inserir durações das músicas"
+        />
+      </div>
+
+      <!-- Botões de Controle -->
+      <div class="controls-section">
+        <div class="button-row">
+          <button class="button | button--toggle" id="shuffle-btn" title="Embaralhar">
+            <i class="ph-shuffle"></i>
+          </button>
+          <button class="button" id="back-btn" title="Sequência Anterior">
+            <i class="ph-skip-back"></i>
+          </button>
+          <button class="button | button--toggle button--play" id="play-btn" title="Calcular/Play">
+            <i class="ph-play"></i>
+            <i class="ph-pause"></i>
+          </button>
+          <button class="button" id="forward-btn" title="Próxima Sequência">
+            <i class="ph-skip-forward"></i>
+          </button>
+          <button class="button | button--toggle" id="repeat-btn" title="Repetir">
+            <i class="ph-repeat"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Seção de Resultado -->
+      <div class="result-section" id="result-section">
+        <h3>🔍 Resultado da Análise</h3>
+        <div class="result-content" id="result-content">
+          <p class="result-placeholder">Insira as durações das músicas e clique em PLAY para calcular!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio elements para os themes -->
+    <audio id="theme1" preload="auto">
+      <source src="assets/theme1.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="theme2" preload="auto">
+      <source src="assets/theme2.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="theme3" preload="auto">
+      <source src="assets/theme3.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="theme4" preload="auto">
+      <source src="assets/theme4.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="theme5" preload="auto">
+      <source src="assets/theme5.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="js/script.js"></script>
+    <script src="js/button.js"></script>
+  </body>
+</html>

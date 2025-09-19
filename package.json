@@ -1,0 +1,12 @@
+{
+  "name": "desafio_298",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --no-source-map scss:css",
+    "watch": "sass --watch --no-source-map scss:css",
+    "dev": "npm run watch"
+  },
+  "devDependencies": {
+    "sass": "^1.74.0"
+  }
+}
